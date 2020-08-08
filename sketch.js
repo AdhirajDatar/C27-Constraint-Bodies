@@ -34,7 +34,11 @@ function setup(){
     log4 = new Log(760,120,150, PI/7);
     log5 = new Log(870,120,150, -PI/7);
 
+    cLog = new Log(230,180,100,PI/2);
+
     bird = new Bird(100,100);
+
+    chain = new Chain(cLog.body,bird.body);
 
 }
 
@@ -61,4 +65,8 @@ function draw(){
 
     bird.display();
     platform.display();
+
+    cLog.display();
+
+    chain.display();
 }
